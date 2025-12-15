@@ -1,0 +1,182 @@
+/* lastfirst_styles.css
+   Main styles for Final Project
+*/
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: hsl(272, 8%, 68%);
+}
+
+/* Global layout */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header.site-header {
+  background: linear-gradient(135deg, #5b2cff, #ff3f81);
+  color: #000000;
+  padding: 1.5rem;
+}
+
+header.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header.site-header p {
+  margin: 0.25rem 0 0;
+}
+
+nav.site-nav {
+  background: #222;
+}
+
+nav.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+}
+
+nav.site-nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1.5rem;
+  background: #fff;
+}
+
+footer.site-footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+/* Generic grid for main page */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.hero {
+  background: #ece8ff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+aside.sidebar {
+  background: #ffe8f2;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+/* Card-style sections */
+.section-card {
+  background: #fafafa;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  border: 1px solid #e1e1e1;
+}
+
+/* Link Reference table */
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.links-table th,
+.links-table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.links-table th {
+  background: #eee;
+}
+
+/* Wireframe helpers for mylayout.html */
+.wireframe-box {
+  border: 2px dashed #999;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(220, 220, 220, 0.4),
+    rgba(220, 220, 220, 0.4) 10px,
+    rgba(240, 240, 240, 0.4) 10px,
+    rgba(240, 240, 240, 0.4) 20px
+  );
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.wireframe-box h2,
+.wireframe-box p {
+  margin: 0.25rem 0;
+}
+
+/* Framework-specific layout */
+.framework-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Simple responsiveness */
+@media (max-width: 800px) {
+  .layout-grid,
+  .framework-main {
+    grid-template-columns: 1fr;
+  }
+
+  nav.site-nav ul {
+    padding-inline: 1rem;
+  }
+}
+/* Contact type group */
+.contact-types {
+  border: 0;              
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.contact-types legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Put the options in a row and align them nicely */
+.contact-types label {
+  display: inline-flex;   
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 1.5rem;   
+  margin-bottom: 0.25rem;
+}
