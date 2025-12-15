@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <!--
+          New Perspectives on HTML5, CSS3, and Javascript
+          Assignment 5.1 Jersey Buoys
+          
+          Jersey Buoys home page
+          Author: Uriel Torres
+          Date:   12/1/2025
+      
+          Filename: jb_home.html
+         -->
+   
+     <meta charset="utf-8">
+  <title>Jersey Buoys Surf School | Ocean City, NJ</title>
+
+  <!-- Viewport for mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main screen stylesheet -->
+  <link rel="stylesheet" href="../css/jb_styles.css" media="screen">
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Logo image -->
+    <img src="../images/jb_logo.png" alt="Jersey Buoys Surf School logo" class="logo">
+
+    <div class="header-text">
+      <h1>Jersey Buoys Surf School</h1>
+      <p>Surf lessons and camps on the Jersey Shore in Ocean City, New Jersey.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <!-- Navicon image for mobile menu -->
+    <a id="navicon" href="#">
+      <img src="../images/jb_navicon.png" alt="Open navigation menu">
+    </a>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Lessons</a></li>
+      <li><a href="#">Camps</a></li>
+      <li><a href="#">Instructors</a></li>
+      <li><a href="#">Schedule</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Intro/hero section -->
+    <section id="intro" class="flex-row">
+      <article class="flex-item intro-text">
+        <h2>Catch the Perfect Wave</h2>
+        <p>
+          At Jersey Buoys, we specialize in beginner to intermediate surf instruction,
+          helping you stand up, paddle out, and ride your first wave safely.
+        </p>
+        <p>
+          Our certified instructors know the Ocean City breaks and tides like the
+          back of their hand, so you can focus on having fun in a safe environment.
+        </p>
+        <p><a class="btn" href="#">View lesson options</a></p>
+      </article>
+
+      <figure class="flex-item intro-image">
+        <!-- Hero surf image -->
+        <img src="../images/jb_back1.png" alt="Surfer riding a wave at Jersey Buoys">
+        <figcaption>Morning session at 8th Street beach in Ocean City, NJ.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Lessons cards, each with its own surf image -->
+    <section id="lessons" class="flex-row cards">
+      <article class="flex-item card" id="card-private">
+        <img src="../images/jb_image02.png" alt="Surfer carving on a wave">
+        <h2>Private Lessons</h2>
+        <p>
+          One-on-one coaching tailored to your current level, from first-timers
+          to surfers looking to sharpen their turns and timing.
+        </p>
+        <p><a class="btn" href="#">Book a private</a></p>
+      </article>
+
+      <article class="flex-item card" id="card-group">
+        <img src="../images/jb_image03.png" alt="Surfer dropping into a wave">
+        <h2>Group Classes</h2>
+        <p>
+          Learn with friends or family in small groups. Perfect for birthdays,
+          reunions, or team-building sessions.
+        </p>
+        <p><a class="btn" href="#">See group rates</a></p>
+      </article>
+
+      <article class="flex-item card" id="card-camps">
+        <!-- reuse one of the back images if you like -->
+        <img src="../images/jb_image01.png" alt="Large ocean wave near rocks">
+        <h2>Surf Camps</h2>
+        <p>
+          Week-long surf camps for kids and teens, focusing on ocean safety,
+          paddling skills, and wave reading.
+        </p>
+        <p><a class="btn" href="#">View camp schedule</a></p>
+      </article>
+    </section>
+
+    <!-- Background / gallery section using the 2 water background images -->
+    <section id="gallery" class="flex-row">
+      <figure class="flex-item">
+        <img src="../images/jb_back2.png" alt="Calm blue ocean horizon">
+        <figcaption>Perfectly glassy conditions for longboard sessions.</figcaption>
+      </figure>
+
+      <figure class="flex-item">
+        <img src="../images/jb_back3.png" alt="Sunlit ripples on blue water">
+        <figcaption>Ideal practice water for flat-day paddle training.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Contact section with tel: and mailto: links -->
+    <section id="contact">
+      <h2>Contact Jersey Buoys</h2>
+      <p>Have questions or ready to ride?</p>
+      <p>
+        Phone:
+        <a class="contact-link" href="tel:+16095551234">(609) 555-1234</a>
+      </p>
+      <p>
+        Email:
+        <a class="contact-link" href="mailto:info@jerseybuoys.com">info@jerseybuoys.com</a>
+      </p>
+      <p>
+        Address:<br>
+        800 Boardwalk<br>
+        Ocean City, NJ 08226
+      </p>
+    </section>
+
+    <!-- Surfer slang (hidden on mobile in your CSS media query) -->
+    <aside id="slang">
+      <h2>Surfer Slang</h2>
+      <dl>
+        <dt>Gnarly</dt>
+        <dd>Waves that are big, challenging, or intense.</dd>
+
+        <dt>Stoked</dt>
+        <dd>Extremely excited or happy about a session or wave.</dd>
+
+        <dt>Set</dt>
+        <dd>A group of larger waves that arrive together.</dd>
+      </dl>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Jersey Buoys Surf School • Ocean City, New Jersey</p>
+
+    <!-- Social media icons -->
+    <p>
+      <a href="#" aria-label="Jersey Buoys on Facebook">
+        <img src="../images/fbicon.png" alt="Facebook icon">
+      </a>
+      <a href="#" aria-label="Jersey Buoys on Twitter">
+        <img src="../images/twittericon.png" alt="Twitter icon">
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>

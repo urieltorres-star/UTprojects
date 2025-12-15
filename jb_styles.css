@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5, CSS3, and Javascript
+   Assignment 5.1 Jersey Buoys
+   
+   Author:   Uriel Torres
+   Date:       12/01/2025
+
+   
+   Filename: jb_styles.css
+
+   This file contains the screen styles used with the 
+   Jersey Buoys home page
+
+*/
+/* ===============================
+   1. Base / Global Styles
+   =============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #083047;
+  background-color: #828fa8;
+}
+
+/* Generic elements */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #0f68b6;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Utility button style */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  border-radius: 999px;
+  background: #0b6abf;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #084a83;
+  text-decoration: none;
+}
+
+/* Layout containers */
+
+.site-header,
+.site-nav,
+main,
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===============================
+   2. Header & Footer
+   =============================== */
+
+.site-header {
+  padding: 1rem 1rem 0.5rem;
+  border-bottom: 3px solid #0b6abf;
+
+  /* Flex layout with WebKit prefix */
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.logo {
+  width: 90px;
+  margin-right: 1rem;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header-text p {
+  margin: 0.25rem 0 0;
+  color: #20506c;
+}
+
+.site-footer {
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #375c73;
+}
+
+/* ===============================
+   3. Navigation
+   =============================== */
+
+.site-nav {
+  padding: 0.5rem 1rem 1rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* Flex row for wider screens */
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-nav li {
+  margin: 0;
+}
+
+.site-nav a {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: #0b6abf;
+  color: #fff;
+}
+
+/* navicon hidden by default on larger screens */
+#navicon {
+  display: none;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   4. Main Content & Flex Layouts
+   =============================== */
+
+main {
+  padding: 1rem 1rem 2rem;
+}
+
+/* Flex-row container used in multiple sections */
+.flex-row {
+  margin-bottom: 2rem;
+
+  /* Flex container with WebKit prefix */
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+/* Flex items with grow / shrink and initial size */
+/* (5) flex items grow and shrink from defined size */
+.flex-item {
+  -webkit-flex: 1 1 250px; /* grow:1, shrink:1, basis:250px */
+  flex: 1 3 250px;
+  padding: 1rem;
+}
+
+/* Intro section */
+
+#intro {
+  background: linear-gradient(120deg, #6794c0, #9bc3e2);
+  border-radius: 1rem;
+}
+
+#intro .intro-text {
+  -webkit-order: 1;
+  order: 1;
+}
+
+#intro .intro-image {
+  -webkit-order: 2;
+  order: 2;
+}
+
+/* Lessons cards section */
+/* Make each lesson card a flex column */
+.cards .card {
+  background: linear-gradient(120deg, #abccec, #4e95cc);
+  border-radius: 0.75rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/* Description text area:
+   on */
+.cards .card .card-desc {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  min-height: 4.5rem;   /* adjust until all cards look even */
+}
+
+
+/* Push the last <p> (the one with the button) to the bottom */
+.cards .card > p:last-of-type {
+  margin-top: auto;
+}
+.cards .card img {
+  width: 100%;
+  height: 190px;    /* or whatever works with your design */
+  object-fit: cover;
+  display: block;
+ 
+}
+/* Example: change order of cards on larger screens */
+#card-group {
+  -webkit-order: 1;
+  order: 1;
+}
+#card-private {
+  -webkit-order: 0;
+  order: 0;
+}
+#card-camps {
+  -webkit-order: 2;
+  order: 2;
+}
+
+/* (5) Flex alignment using justify-content / align-items */
+.cards {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+/* Contact section */
+
+#contact {
+  background: linear-gradient(120deg, #abccec, #4e95cc);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.15rem 0.4rem rgba(0,0,0,0.08);
+}
+
+#contact h2 {
+  margin-top: 0;
+}
+
+/* Surfer slang (will be hidden on mobile) */
+
+#slang {
+  background: linear-gradient(120deg, #abccec, #4e95cc);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+}
+
+#slang h2 {
+  margin-top: 0;
+}
+
+/* ===============================
+   5. Contact Links (base)
+   =============================== */
+
+.contact-link {
+  font-weight: 600;
+}
+
+/* ===============================
+   6. Media Queries
+   =============================== */
+
+/* ---------- Mobile: up to 480px ---------- */
+/* (5) Cutoff for mobile devices at 480px */
+
+@media only screen and (max-width: 480px) {
+
+  /* Layout: stack most flex sections in a column */
+  .flex-row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+  }
+
+  /* Reorder intro so image appears before text on small screens */
+  #intro .intro-image {
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  #intro .intro-text {
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  /* Navigation: show navicon, hide menu initially */
+  #navicon {
+    display: inline-block;
+    padding: 0.4rem 0.7rem;
+    background: #0b6abf;
+    color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .site-nav ul {
+    display: none;           /* initially hidden for mobile */
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  /* Show menu when hovering or tapping navicon / menu */
+  #navicon:hover + ul,
+  #navicon:focus + ul,
+  .site-nav ul:hover {
+    display: block;
+  }
+
+  /* 5) Telephone and email links, reformatted for mobile use */
+  .contact-link {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    background: #0b6abf;
+    color: #fff;
+  }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    background: #084a83;
+    text-decoration: none;
+  }
+
+  /* Tony does not want surfer slang on mobile */
+  #slang {
+    display: none;
+  }
+
+  /* Some spacing adjustments */
+  .site-header {
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+/* ---------- Tablet / small desktop: 481px and up ---------- */
+
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+
+  .flex-row {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .site-nav ul {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+}
+
+/* ---------- Larger desktop: 901px and up ---------- */
+
+@media only screen and (min-width: 901px) {
+
+  .flex-row {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .site-nav ul {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  main {
+    padding-bottom: 3rem;
+  }
+
+}

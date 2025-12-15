@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5, CSS3, and Javascript
+   Assignment 3.1 Page Layout
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Uriel Torres
+   Date: 11/17/2025
+   
+   Filename: ss_layout.css
+*/
+
+
+/* -------------------- Article Styles (Step 4) -------------------- */
+
+article {
+   float: left;
+   width: 384px;
+}
+
+
+/* ----------- First Line and Drop Cap Styles (Steps 5 & 6) -------- */
+
+article p:first-of-type:first-line {
+   font-size: 1.25em;
+   font-variant: small-caps;
+}
+
+article p:first-of-type:first-letter {
+   font-size: 4em;
+   font-family: serif;
+   float: left;
+   line-height: 0.8em;
+   margin-right: 5px;
+   margin-bottom: 5px;
+}
+
+
+/* ---------------------- Aside Styles (Step 7) --------------------- */
+
+aside {
+   float: left;
+   width: 768px;
+}
+
+
+/* ---------------------- Map Styles (Step 8) ----------------------- */
+
+#battleMap {
+   width: 688px;
+   margin: 20px auto;
+   position: relative;
+}
+
+
+/* ------------------- Map Image Styles (Step 9) -------------------- */
+
+#mapImage {
+   display: block;
+   width: 100%;
+}
+
+
+/* ---------------- Interactive Map Styles (Step 10) ---------------- */
+
+a.battleMarkers {
+   position: absolute;
+}
+
+
+/* -------- Marker Positions (Step 11) -------- */
+
+#marker1 { top: 220px; left: 340px; }
+#marker2 { top: 194px; left: 358px; }
+#marker3 { top: 202px; left: 400px; }
+#marker4 { top: 217px; left: 452px; }
+#marker5 { top: 229px; left: 498px; }
+#marker6 { top: 246px; left: 544px; }
+
+
+/* ---------------- Map Information Styles (Step 12) ---------------- */
+
+.mapInfo {
+   display: none;
+   width: 300px;
+   background-color: rgba(255, 255, 255, 0.9);
+   padding: 10px;
+   border: 1px solid #555;
+   position: absolute;
+   left: 0;
+}
+
+
+/* ---- Hover Rule for Map Info Visibility (Step 13) ---- */
+
+a.battleMarkers:hover + div.mapInfo {
+   display: block;
+}

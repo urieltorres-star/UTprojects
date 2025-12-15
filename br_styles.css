@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, Javascrypt
+   Tutorial 4: Case Problem 4 — Browyer Realty Listing
+
+   Author: Uriel Torres
+   Date:   11/22/2025
+
+   Filename: br_styles.css
+*/
+
+/* =============================================
+   Root + Global Type
+   ============================================= */
+
+:root {
+   --green: #214a3b;
+   --cream: #f7f2e7;
+   --cream-dark: #efe5d2;
+   --ink: #121212;
+   --accent: #2b6cb0;
+}
+
+html {
+   /* REQUIRED: background image */
+   background: url("../images/br_paper.png") center/cover fixed no-repeat;
+   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+   color: var(--ink);
+}
+
+body {
+   max-width: 1100px;
+   margin: 0 auto;
+   background:
+      /* REQUIRED: radial gradient + linear gradient */
+      radial-gradient(circle at top left, rgba(255,255,255,0.95), rgba(247,242,231,0.75)),
+      linear-gradient(180deg, var(--cream), var(--cream-dark));
+   border-radius: 18px;  /* REQUIRED: curved border */
+   box-shadow: 0 12px 40px rgba(0,0,0,0.35); /* REQUIRED: box shadow */
+   overflow-x: hidden;
+}
+
+/* =============================================
+   Header + Nav
+   ============================================= */
+
+.site-header {
+   padding: 22px 20px 10px;
+   background: rgba(33, 74, 59, 0.95);
+   color: white;
+   border-top-left-radius: 18px;
+   border-top-right-radius: 18px;
+}
+
+.brand h1 {
+   font-size: clamp(1.7rem, 3vw, 2.4rem);
+   letter-spacing: 0.5px;
+
+   /* REQUIRED: text shadow */
+   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.tagline {
+   opacity: 0.9;
+   margin-top: 4px;
+}
+
+.main-nav ul {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-top: 12px;
+   list-style: none;
+   padding: 0;
+}
+
+.main-nav a {
+   color: white;
+   text-decoration: none;
+   padding: 8px 12px;
+   border-radius: 10px;
+   display: block;
+   transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.main-nav a:hover {
+   background: rgba(255,255,255,0.15);
+
+   /* REQUIRED: transform */
+   transform: translateY(-2px);
+}
+
+
+/* =============================================
+   Main Layout
+   ============================================= */
+
+.page {
+   padding: 20px;
+   display: grid;
+   gap: 22px;
+}
+
+/* HERO CARD */
+.hero-card {
+   display: grid;
+   grid-template-columns: 1.1fr 1fr;
+   gap: 18px;
+   padding: 18px;
+   background: rgba(255,255,255,0.9);
+   border: 2px solid rgba(33,74,59,0.3);  
+   border-radius: 18px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero-text h2 {
+   font-size: 1.4rem;
+   font-weight: 800;
+   margin-bottom: 6px;
+}
+
+.price {
+   font-size: 1.8rem;
+   font-weight: 800;
+   color: var(--green);
+}
+
+.address {
+   margin: 6px 0 12px;
+}
+
+.fact-row {
+   display: flex;
+   gap: 12px;
+   margin: 12px 0;
+}
+
+.fact {
+   background: var(--cream);
+   border-radius: 12px;
+   padding: 10px 14px;
+   text-align: center;
+   min-width: 90px;
+}
+
+.fact-num {
+   font-size: 1.3rem;
+   font-weight: 700;
+   display: block;
+}
+
+.cta-btn {
+   background: var(--accent);
+   color: white;
+   padding: 10px 14px;
+   border-radius: 10px;
+   display: inline-block;
+   text-decoration: none;
+   margin-top: 8px;
+}
+
+.hero-figure img {
+   width: 100%;
+   border-radius: 6px;
+}
+
+
+.hero-figure img:hover {
+   filter: saturate(1.2) contrast(1.05);
+}
+
+
+/* =============================================
+   Gallery
+   ============================================= */
+
+.gallery {
+   background: rgba(255,255,255,0.9);
+   padding: 16px;
+   border-radius: 14px;
+   border: 1px solid rgba(0,0,0,0.08);
+}
+
+.gallery-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   margin-top: 10px;
+}
+
+.gallery figure {
+   background: white;
+   padding: 6px;
+   border-radius: 12px;
+   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+   transition: transform 0.2s ease;
+}
+
+.gallery figure:hover {
+   transform: scale(1.02);
+}
+
+.gallery img {
+   width: 100%;
+   border-radius: 8px;
+}
+
+.gallery figcaption {
+   text-align: center;
+   font-size: 0.9rem;
+   margin-top: 6px;
+}
+
+
+/* =============================================
+   Details Section
+   ============================================= */
+
+.details {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 16px;
+}
+
+.description, .features {
+   background: rgba(255,255,255,0.92);
+   padding: 16px;
+   border-radius: 14px;
+   border: 1px solid rgba(0,0,0,0.08);
+}
+
+.features ul {
+   margin-top: 8px;
+   padding-left: 18px;
+}
+
+
+/* =============================================
+   Agent Card
+   ============================================= */
+
+.agent-card {
+   display: flex;
+   gap: 14px;
+   align-items: center;
+   background: rgba(33, 74, 59, 0.08);
+   padding: 14px;
+   border-radius: 14px;
+   border: 1px dashed rgba(33,74,59,0.4);
+}
+
+.agent-photo.agent-logo {
+   width: 220px;
+   height: auto;
+   aspect-ratio: auto;
+   object-fit: contain;
+   object-position: center;
+   border-radius: 12px;
+   padding: 8px;
+   background: white;
+}
+
+.agent-name {
+   font-weight: 800;
+   font-size: 1.1rem;
+}
+
+.cta-outline {
+   display: inline-block;
+   margin-top: 6px;
+   padding: 8px 12px;
+   border-radius: 10px;
+   border: 2px solid var(--accent);
+   color: var(--accent);
+   text-decoration: none;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+
+.site-footer {
+   background: rgba(33, 74, 59, 0.95);
+   color: white;
+   text-align: center;
+   padding: 16px;
+   border-bottom-left-radius: 18px;
+   border-bottom-right-radius: 18px;
+}
+
+.site-footer a {
+   color: white;
+}
+
+/* =============================================
+   Responsive Tweaks (Requirement #6)
+   ============================================= */
+
+@media (max-width: 900px) {
+   .hero-card {
+      grid-template-columns: 1fr;
+   }
+   .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .details {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 520px) {
+   .gallery-grid {
+      grid-template-columns: 1fr;
+   }
+   .fact-row {
+      flex-direction: column;
+      align-items: stretch;
+   }
+}
