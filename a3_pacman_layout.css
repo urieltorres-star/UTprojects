@@ -1,0 +1,118 @@
+/* ====================================================
+   Pac-Man Website Layout - a3_pacman_layout.css
+   Fluid design: 640px - 960px
+   Author: Uriel Torres
+   Date: 11/09/2025
+==================================================== */
+
+/* ---------- Body ---------- */
+body {
+    max-width: 960px;          /* maximum width of page */
+    min-width: 640px;          /* minimum width of page */
+    margin: 0 auto;            /* center the page */
+    padding: 20px;             /* padding around content */
+    font-family: 'Arial', sans-serif;
+    background-color: #000;    /* black Pac-Man background */
+    color: #fff;               /* white text */
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: #FFD700; /* gold/yellow header */
+    text-align: center;
+    padding: 20px;
+    display: block;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #000;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    float: left;
+    width: 25%;                /* navigation column */
+    background-color: #222;
+    padding: 15px;
+    box-sizing: border-box;    /* include padding in width */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* ---------- Main Content ---------- */
+main {
+    float: right;
+    width: 70%;                /* main content column */
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    clear: both;               /* clears floats above */
+    background-color: #222;
+    color: #FFD700;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    display: block;
+}
+
+/* ---------- Images ---------- */
+img {
+    max-width: 100%;           /* responsive images */
+    height: auto;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* Example of relative positioning */
+#pacman-img {
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+/* ---------- Example of absolute positioning (optional) ---------- */
+#ghost-img {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+/* ---------- Headings ---------- */
+h2 {
+    color: #FFD700;
+}
+
+/* ---------- Paragraphs ---------- */
+p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ---------- Responsive Notes ---------- */
+/* The layout is fluid and will adapt between 640px and 960px.
+   Navigation and main content will remain readable on different devices.
+*/
+
+/* End of a3_pacman_layout.css */

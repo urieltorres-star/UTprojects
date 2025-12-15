@@ -1,0 +1,64 @@
+/* a2_pacman_styles.css */
+/* Author: Uriel Torres
+   Date: 11/09/2025
+   Description: Pac-Man Website Style Configuration
+*/
+
+/* Character encoding definition */
+@charset "UTF-8";
+
+/* Import web fonts */
+@font-face {
+  font-family: "PixelFont";
+  src: url("fonts/PixelFont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "ArcadeFont";
+  src: url("fonts/ArcadeFont.woff2") format("woff2");
+}
+
+/* General body styles */
+body {
+  font-family: "PixelFont", "ArcadeFont", sans-serif;
+  background-color: black; /* using color name */
+  color: #FFFF00; /* using color value */
+  margin: 0;
+  padding: 0;
+}
+
+/* Semi-transparent background for content area */
+main {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Nested and child element selectors */
+nav ul li a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #FF0000;
+}
+
+/* ID selector */
+#highscore {
+  font-weight: bold;
+  color: #00FF00;
+}
+
+/* Lists and list markers */
+ul {
+  list-style-type: square;
+  padding-left: 40px;
+}
+
+/* Adjust padding and margins */
+header, footer {
+  padding: 10px;
+  margin: 10px;
+  background-color: #222222;
+}
